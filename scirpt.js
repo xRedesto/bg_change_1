@@ -10,7 +10,7 @@ let menus = document.querySelectorAll("div.sqr");
 let current_back = 0;
 
 
-function wieksze(i,o){
+function higher(i,o){
 	(function  a(){
 		if(i>o.getAttribute("n")){
 			i--;
@@ -20,7 +20,7 @@ function wieksze(i,o){
 })();
 }
 
-function mniejsze(i, o){
+function lower(i, o){
 	(function  a(){
 		if(i<o.getAttribute("n")){
 			backg[i].style.height  = "0vh";
@@ -39,7 +39,7 @@ button1.addEventListener('click', function(){
 	
 	if(current_back>0){
 		let i = current_back;
-		wieksze(i,  this);
+		higher(i,  this);
 	}
 	
 	menus[current_back].classList.remove("active_menu");
@@ -55,11 +55,11 @@ button2.addEventListener('click', function(){
 	
 	if(current_back>1){
 		let i = current_back;	
-		wieksze(i,  this);	
+		higher(i,  this);	
 	}
 	else{
 		let i = 0;
-		mniejsze(i,this);
+		lower(i,this);
 	}
 	
 	menus[current_back].classList.remove("active_menu");
@@ -75,11 +75,11 @@ button3.addEventListener('click', function(){
 
 	if(current_back>2){
 		let i = current_back;
-		wieksze(i,  this);
+		higher(i,  this);
 	}
 	else{
 		let i = 0;
-		mniejsze(i,this);
+		lower(i,this);
 	}
 	
 	menus[current_back].classList.remove("active_menu");
@@ -95,11 +95,11 @@ button4.addEventListener('click', function(){
 	
 	if(current_back>3){
 		let i = current_back;
-		wieksze(i,  this);
+		higher(i,  this);
 	}
 	else{
 		let i = 0;
-		mniejsze(i,this);
+		lower(i,this);
 	}
 	
 	menus[current_back].classList.remove("active_menu");
@@ -114,7 +114,7 @@ button5.addEventListener('click', function(){
 	}
 		
 	let i = 0;
-	mniejsze(i,this);
+	lower(i,this);
 	
 	menus[current_back].classList.remove("active_menu");
 	menus[4].classList.add("active_menu");
